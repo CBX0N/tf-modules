@@ -3,9 +3,8 @@ locals {
     uksouth = "uks"
   }
 
-  rg-name = join("-", [
-    "rg",
-    var.rg-name,
+  vnet-name = join("-", [
+    "vnet",
     var.service,
     var.env,
     local.locationShort[var.location],
