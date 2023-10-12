@@ -10,4 +10,12 @@ locals {
     local.locationShort[var.location],
     var.index
   ])
+
+  nsg-name = join("-", [
+    "vnet",
+    var.service,
+    var.env,
+    local.locationShort[var.location],
+    var.index
+  ])
 }
