@@ -4,7 +4,7 @@ resource "azurerm_public_ip" "pip" {
   resource_group_name = var.rg-name
   location = var.location
   sku = "Basic"
-  allocation_method = "Dynamic"
+  allocation_method = "Static"
 
   tags = var.tags
 }
