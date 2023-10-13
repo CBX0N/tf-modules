@@ -1,6 +1,7 @@
 locals {
   locationShort = {
     uksouth = "uks"
+        centralus = "usc"
   }
 
   str-name = join("", [

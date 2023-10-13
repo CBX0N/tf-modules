@@ -1,6 +1,8 @@
 locals {
   locationShort = {
     uksouth = "uks"
+        centralus = "usc"
+
   }
 
   rg-name = join("-", [

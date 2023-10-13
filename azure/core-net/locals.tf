@@ -1,6 +1,7 @@
 locals {
   locationShort = {
     uksouth = "uks"
+    centralus = "usc"
   }
 
   vnet-name = join("-", [

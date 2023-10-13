@@ -11,6 +11,10 @@ resource "azurerm_network_security_group" "nsg" {
       direction                    = security_rule.value.direction
       priority                     = security_rule.value.priority
       protocol                     = security_rule.value.protocol
+      source_address_prefix        = security_rule.value.source_address_prefix
+      destination_address_prefix   = security_rule.value.destination_address_prefix
+      source_port_range            = security_rule.value.source_port_range
+      destination_port_range       = security_rule.value.destination_port_range
       source_address_prefixes      = security_rule.value.source_address_prefixes
       destination_address_prefixes = security_rule.value.destination_address_prefixes
       source_port_ranges           = security_rule.value.source_port_ranges
@@ -21,7 +25,7 @@ resource "azurerm_network_security_group" "nsg" {
 
 resource "azurerm_subnet_network_security_group_association" "nsg_association" {
   for_each = { for name, snet in var.net-conf.subnet-conf : name => snet
-  if snet.nsg != "false" }
+  if snet.nsg == true }
   network_security_group_id = azurerm_network_security_group.nsg.id
   subnet_id                 = azurerm_subnet.snet[each.key].id
 }

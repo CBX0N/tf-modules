@@ -1,11 +1,11 @@
 locals {
   locationShort = {
     uksouth = "uks"
-        centralus = "usc"
+    centralus = "usc"
   }
 
-  kv-name = join("-", [
-    "kv",
+  vm-name = join("", [
+    "vm",
     var.service,
     var.env,
     local.locationShort[var.location],

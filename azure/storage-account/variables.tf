@@ -3,11 +3,6 @@ variable "rg-name" {
   default = ""
 }
 
-variable "tenant_id" {
-  type    = string
-  default = ""
-}
-
 variable "location" {
   type    = string
   default = ""
