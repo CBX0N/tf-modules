@@ -30,5 +30,6 @@ resource "azurerm_linux_virtual_machine" "linux-vm" {
     sku       = "20_04-lts"
     version   = "latest"
   }
+  tags = var.tags
 }
 

@@ -21,6 +21,7 @@ resource "azurerm_network_security_group" "nsg" {
       destination_port_ranges      = security_rule.value.destination_port_ranges
     }
   }
+  tags = var.tags
 }
 
 resource "azurerm_subnet_network_security_group_association" "nsg_association" {

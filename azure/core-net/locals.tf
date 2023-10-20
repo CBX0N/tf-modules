@@ -13,7 +13,7 @@ locals {
   ])
 
   nsg-name = join("-", [
-    "vnet",
+    "nsg",
     var.service,
     var.env,
     local.locationShort[var.location],

@@ -3,4 +3,5 @@ resource "azurerm_ssh_public_key" "sshkey" {
   resource_group_name = var.rg-name
   location = var.location
   public_key = var.ssh_public_key
+  tags = var.tags
 }
